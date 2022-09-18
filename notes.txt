@@ -7,3 +7,8 @@ create :
 
 Create server :- 
 1] 
+
+
+For Nodemon Installation :-
+
+npm install -g nodemon
