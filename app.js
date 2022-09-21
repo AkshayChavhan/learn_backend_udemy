@@ -21,18 +21,20 @@ app.get('/',function(req,res){
             // to turn buffer data into json i.e. obj formate
             const weatherData = JSON.parse(data);
             console.log(weatherData);
+             res.write( `<p> The weather condition is ${weatherData.weather[0].description}</p>`)
+             res.write(`<h1>The temperature in location is ${weatherData.main.temp} kelvin </h1>`)
             
-            // to turn object into string
-            const weatherDataString = JSON.stringify(weatherData);
-            console.log(weatherDataString);
-            
-            // fetching data from object
-            console.log(weatherData.main.temp);
+
+            // image URL
+            const icon = weatherData.weather[0].icon ;
+            const imageURL = 'http://openweathermap.org/img/wn/'+ icon +'10d@2x.png';
+            res.write("<img src=" + imageURL +">");
+            res.send();
         })
     })
 
 
-    res.send('Response from backend for get request');
+    // remember the send request can only be one as after send there will end of response
 })
 
 app.listen(3004 ,function(){
