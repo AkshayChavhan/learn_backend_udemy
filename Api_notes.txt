@@ -1,0 +1,51 @@
+API :- application programming interface 
+
+it includes
+-endpoints
+-paths
+-parameters
+-authentification
+
+joke api for more above :-
+link :- https://sv443.net/jokeapi/v2/
+
+we have certain condition in getting jokes like
+catagories          Any by default
+language            EN by default
+flag to blacklist                 
+response formate    JSON by default
+joke type
+search (string)
+amount of jokes
+
+
+
+for eg:
+
+https://v2.jokeapi.dev/joke/Programming,Dark,Christmas?lang=es&blacklistFlags=religious&format=yaml&type=single&contains
+=girl&amount=3
+
+
+catagories                  Programming,Dark,Christmas
+language                    EN by default  (es-spanish)
+flag to blacklist                   religious        
+response formate            JSON by default  (yaml)
+joke type                   single
+search (string)             joke contain 'girl'
+amount of jokes             3
+
+here  we can say that 
+Endpoint :- https://v2.jokeapi.dev/joke/
+Parameters (starts with ? ):-  Programming,Dark,Christmas?lang=es&blacklistFlags=religious&format=yaml&type=single&contains
+
+
+authentification :- 
+
+
+you will get key for weather app https://home.openweathermap.org/ as we click on API after sign in.
+
+here
+https://api.openweathermap.org/data/2.5/weather?q=yavatmal&appid=facb69ad9a60521c9a5379f4b6e883e9
+
+we have key for authentification is facb69ad9a60521c9a5379f4b6e883e9
+
